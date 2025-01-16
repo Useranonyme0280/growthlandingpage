@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page pour agence de Growth">
+    <title>Agence Growth - Dites-nous tout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        header {
+            width: 100%;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            margin-top: 2rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ff7e5f;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            color: #666;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, textarea, select, button {
+            font-size: 1rem;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #ff7e5f;
+            box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
+        }
+
+        button {
+            background: #ff7e5f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #e8694f;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #fff;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            input, textarea, button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agence Growth</h1>
+    </header>
+
+    <div class="container">
+        <h2>Dites-nous ce dont vous avez besoin</h2>
+        <p>Nous sommes là pour répondre à vos attentes. Remplissez ce formulaire pour nous aider à comprendre vos besoins spécifiques.</p>
+        <form action="https://formsubmit.co/votre-email@example.com" method="POST">
+            <label for="nom">Votre nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+
+            <label for="secteur">Secteur d'activité</label>
+            <select id="secteur" name="secteur" required>
+                <option value="">Sélectionnez votre secteur</option>
+                <option value="e-commerce">E-commerce</option>
+                <option value="service">Service</option>
+                <option value="consulting">Consulting</option>
+                <option value="autre">Autre</option>
+            </select>
+
+            <label for="objectifs">Quels sont vos objectifs principaux ?</label>
+            <textarea id="objectifs" name="objectifs" rows="4" placeholder="Détaillez vos objectifs..." required></textarea>
+
+            <label for="budget">Quel est votre budget approximatif ?</label>
+            <input type="text" id="budget" name="budget" placeholder="Entrez un montant ou une estimation">
+
+            <label for="delai">Quel est votre délai idéal ?</label>
+            <select id="delai" name="delai" required>
+                <option value="">Sélectionnez un délai</option>
+                <option value="moins-d-un-mois">Moins d'un mois</option>
+                <option value="1-3-mois">1 à 3 mois</option>
+                <option value="plus-de-3-mois">Plus de 3 mois</option>
+            </select>
+
+            <label for="autres">Autres remarques ou besoins spécifiques</label>
+            <textarea id="autres" name="autres" rows="4" placeholder="Ajoutez vos remarques..."></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Agence Growth. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
